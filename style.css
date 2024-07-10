@@ -6,12 +6,12 @@
 
 @font-face {
     font-family: "Montserrat";
-    src: url("./assets/fonts/Montserrat/Montserrat-Italic-VariableFont_wght.ttf")
+    src: url("./assets/fonts/Montserrat/Montserrat-VariableFont_wght.ttf")
 }
 
 @font-face {
     font-family: "Fraunces";
-    src: url("./assets/fonts/Fraunces/Fraunces-Italic-VariableFont_SOFT,WONK,opsz,wght.ttf");
+    src: url("./assets/fonts/Fraunces/Fraunces-VariableFont_SOFT,WONK,opsz,wght.ttf");
 }
 
 body {
@@ -22,4 +22,120 @@ body {
     --Very-dark-blue: hsl(212, 21%, 14%);
     --Dark-grayish-blue: hsl(228, 12%, 48%);
     --White: hsl(0, 0%, 100%);
+    /* font */
+    font-family: Montserrat;
+}
+
+h1 {
+    font-family: Fraunces;
+    color: var(--Very-dark-blue);
+}
+
+p {
+    color: var(--Dark-grayish-blue);
+    font-size: 14px;
+    font-weight: 500;
+}
+
+a {
+    text-decoration: none;
+    color: var(--White);
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.container {
+    background-color: var(--Cream);
+    height: 100vh;
+    display: grid;
+}
+
+main {
+    place-self: center;
+}
+
+.product--card {
+    width: 600px;
+    height: 450px;
+    display: flex;
+}
+
+.product--card--image {
+    border-radius: 10px 0 0 10px;
+    width: 50%;
+    background: url("./assets/images/image-product-desktop.jpg")no-repeat center/100%;
+}
+
+.product--card--info {
+    border-radius: 0 10px 10px 0;
+    width: 50%;
+    padding: 24px;
+    background-color: var(--White);
+}
+
+.tag {
+    font-weight: 400;
+    letter-spacing: 10px;
+}
+
+.product-name h1 {
+    margin: 20px 0;
+}
+
+.product-prize {
+    display: flex;
+    align-items: center;
+    margin: 20px 0 35px 0;
+}
+
+.new--prize h1 {
+    color: var(--Dark-cyan);
+    margin-right: 30px;
+}
+
+.old-prize p {
+    text-decoration: line-through;
+}
+
+.add-to-cart-button {
+    text-align: center;
+    background-color: var(--Dark-cyan);
+    padding: 16px 50px;
+    border-radius: 10px;
+}
+
+.add-to-cart-button:hover {
+    background-color: var(--Very-dark-blue);
+}
+
+.icons {
+    margin-right: 10px;
+}
+
+@media (max-width : 769px) {
+    .product--card {
+        /* width: 660px; */
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .product--card--image {
+        border-radius: 10px 10px 0 0;
+        width: 75%;
+        height: 224px;
+        background: url("./assets/images/image-product-mobile.jpg")no-repeat center/100%;
+    }
+
+    .product--card--info {
+        width: 75%;
+        border-radius: 0 0 10px 10px;
+    }
+
+    .add-to-cart-button {
+        padding: 16px 100px;
+    }
+
 }
